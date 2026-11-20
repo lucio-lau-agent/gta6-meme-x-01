@@ -63,9 +63,11 @@ must stay public until the results are out.
 
 ## How the entry program works
 
-`main.ts` is the kit's harness, kept exactly as handed out. When it is
-run with the `MAKEFUN_OUTPUT_DIR` environment variable set, it copies
-`POST.json` into that output directory. `POST.json` holds a single
+`main.ts` is an original implementation of the kit harness's
+behaviour, written for this entry to the same input/output contract.
+When it is run with the `MAKEFUN_OUTPUT_DIR` environment variable
+set, it validates `POST.json` and copies it into that output
+directory. `POST.json` holds a single
 object, `{"url": "<the X post URL>"}`, pointing at the published post —
 so the whole entry is: this repository names the post, and the post is
 the meme.
@@ -73,8 +75,9 @@ the meme.
 ## Repository contents
 
 - `POST.json` — the entry: a link to the published X post.
-- `main.ts` — the kit harness that copies `POST.json` to the output
-  directory (unchanged from the kit).
+- `main.ts` — an original implementation of the kit harness's
+  behaviour: it validates `POST.json` and copies it to the output
+  directory.
 - `README.md` — this file.
 - `AGENT.md` and `LICENSE` — the kit's agent notes and the MIT licence,
   unchanged.
